@@ -1,0 +1,131 @@
+@-webkit-keyframes enter_title {
+  to {
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+}
+
+@keyframes enter_title {
+  to {
+    -webkit-transform: scale(2.7);
+            transform: scale(2.7);
+  }
+}
+
+@-webkit-keyframes enter_title_small {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); 
+  }
+}
+
+@keyframes enter_title_small {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); 
+  }
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: auto 100%;
+}
+
+.grid {
+  display: grid;
+  margin: 0 auto;
+  max-width: 700px;
+  grid-gap: 10px;
+  grid-template-areas: "marcia carol greg"
+                       "jan title peter"
+                       "cindy mike bobby";
+}
+
+.grid > * {
+  background: white;
+}
+
+.marcia {
+  grid-area: marcia;
+}
+
+.carol {
+  grid-area: carol;
+}
+
+.greg {
+  grid-area: greg;
+}
+
+.jan {
+  grid-area: jan;
+}
+
+.peter {
+  grid-area: peter;
+}
+
+.cindy {
+  grid-area: cindy;
+}
+
+.mike {
+  grid-area: mike;
+}
+
+.bobby {
+  grid-area: bobby;
+}
+
+.title {
+  grid-area: title;
+  background: transparent;
+  position: relative;
+}
+
+.title img {
+  position: absolute;
+  width: 165px;
+  height: 138px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  right: 30px;
+  top: 20px;
+  -webkit-animation: enter_title 3s forwards 1s;
+          animation: enter_title 3s forwards 1s;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;  
+  height: 100%; 
+}
+
+@media screen and (max-width: 36.5em) {
+  body {
+    display: block;
+  }
+  
+  .grid {
+    grid-template-areas: "title title"
+                         "marcia carol"
+                         "greg jan"
+                         "peter cindy"
+                         "mike bobby";                        
+  }
+  
+  .title img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    -webkit-animation: enter_title_small 3s forwards 1s;
+            animation: enter_title_small 3s forwards 1s;
+  }
+}
