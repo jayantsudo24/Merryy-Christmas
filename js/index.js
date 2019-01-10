@@ -1,7 +1,7 @@
 var options = {
   container:document.querySelector(".collage_container"),
   piecesNum:50,
-  imgSrc : "https://i.imgur.com/1cZTsqn.jpg"
+  imgSrc : "https://i.imgur.com/SiJRnQD.jpg"
 }
 
 
